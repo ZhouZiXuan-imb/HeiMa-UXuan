@@ -1,0 +1,37 @@
+<!--pages/goods_detail/main.wxml-->
+<view class="container">
+  <!-- 轮播图部分 start -->
+  <view class="swiper">
+    <swiper indicator-dots autoplay interval="4000" circular>
+      <swiper-item wx:for="{{goodsParticularsData.pics}}" wx:for-item="item" wx:key="pics_id">
+        <image src="{{item.pics_big}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图部分 end -->
+
+  <!-- 价格标题部分 start -->
+  <view class="goods_name">
+    <view class="goods_price">
+      ￥{{goodsParticularsData.goods_price}}
+    </view>
+    <view class="goods_body">
+      <view class="goods_text">{{goodsParticularsData.goods_name}}</view>
+      <view class="goods_collect">
+        <text class="collect_icon">★</text>
+        收藏
+      </view>
+    </view>
+    <view class="freight">
+      快递：免运费
+    </view>
+  </view>
+  <!-- 价格标题部分 start -->
+  
+  <!-- 其他广告 start -->
+  <view class="ad">
+    <rich-text nodes="{{goodsParticularsData.goods_introduce}}"></rich-text>
+  </view>
+  <!-- 其他广告 end -->
+
+</view>

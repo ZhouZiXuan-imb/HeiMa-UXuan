@@ -1,0 +1,31 @@
+<!-- components/Tabs/Tabs.wxml -->
+<view class="tabs">
+  <!-- 侧边导航栏 start -->
+  <view class="tabs_title">
+    <scroll-view class="tabs_title_scroll" scroll-y>
+      <view class="tabs_item {{index==isActive?'active':''}}" wx:for="{{leftTabData}}" wx:for-item="item" wx:key="cat_id" bindtap="setItemTap" data-index="{{index}}">
+        {{item.cat_name}}
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 侧边导航栏 end -->
+  <!-- 内容部分 start -->
+  <view class="tabs_content">
+    <scroll-view class="tabs_content_scroll" scroll-y>
+      <view class="tabs_content_introduce" wx:for="{{leftTabData[isActive].children}}" wx:for-item="item" wx:key="cat_id">
+        <!-- 标题 start -->
+        <view class="tabs_content_title">/ {{item.cat_name}} /</view>
+        <!-- 标题 end -->
+        <!-- 内容 start -->
+        <view class="tabs_content_content">
+          <view class="tabs_content_content_items" wx:for="{{item.children}}" wx:for-item="content_item" wx:key="cat_id">
+            <image class="t_items_img" src="{{content_item.cat_icon}}"></image>
+            <view class="t_items_text">{{content_item.cat_name}}</view>
+          </view>
+        </view>
+        <!-- 内容 end -->
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 内容部分 end -->
+</view>

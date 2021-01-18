@@ -1,0 +1,27 @@
+/* pages/category/main.wxss */
+/* 顶部搜索框 start */
+.top_search {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  padding: 14rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #c00000;
+}
+
+.top_search_input {
+  height: calc(36rpx * 2);
+  background-color: #fff;
+  border-radius: 300rpx;
+  text-align: center;
+}
+
+/* 顶部搜索框 end */
+
+
+/* 左边导航栏 start */
+
+
+/* 左边导航栏 end */

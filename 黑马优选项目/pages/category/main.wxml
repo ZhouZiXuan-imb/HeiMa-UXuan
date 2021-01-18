@@ -1,0 +1,13 @@
+<!--pages/category/main.wxml-->
+<view class="container">
+  <!-- 搜索框 start -->
+  <view class="top_search">
+    <input class="top_search_input" type="text" placeholder="搜索" />
+  </view>
+  <!-- 搜索框 end -->
+
+  <!-- 导航栏和内容部分 start -->
+  <tabs></tabs>
+  <!-- 导航栏和内容部分 end -->
+
+</view>
